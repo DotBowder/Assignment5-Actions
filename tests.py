@@ -1,5 +1,6 @@
 import unittest
 import task
+import datetime
 
 
 class TestCase(unittest.TestCase):
@@ -18,6 +19,13 @@ class TestCase(unittest.TestCase):
         r = 2
         expected = 3.14 * r * r
         self.assertEqual(expected, task.area(r))
+
+    def date_test1(self):
+        d1 = datetime.datetime(2020, 1, 10)
+        d2 = datetime.datetime(1800, 2, 5)
+        diff = abs(d2 - d1)
+        expected = diff.days
+        self.assertEqual(expected, task.date(d1, d2))
 
 
 if __name__ == '__main__':
