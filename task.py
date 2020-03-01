@@ -1,2 +1,2 @@
 def firstrun():
-        return "success"
+    return "success"
